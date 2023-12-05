@@ -88,12 +88,59 @@ let timerInterval;
 
 function displayQuestion() {
   var questionNumbersDiv = document.getElementById('questionNumbers');
-questionNumbersDiv.innerHTML = '   CuretFile= <a href="' + generatedQuestions[questionIndex] + '.html" target="_blank">' + generatedQuestions[questionIndex] + '</a> ( Question ' + (questionIndex + 1) + ' of ' + generatedQuestions.length+ ' ) ';
+  var directadd = 0
+  
+  if (generatedQuestions[questionIndex] >= 525583622 && generatedQuestions[questionIndex] <= 525584099) {
+        directadd = 1;
+      }
+  
+    if (generatedQuestions[questionIndex] >= 525584100 && generatedQuestions[questionIndex] <= 525584599) {
+        directadd = 2;
+      }
+	  
+	if (generatedQuestions[questionIndex] >= 525584600 && generatedQuestions[questionIndex] <= 525585099) {
+        directadd = 3;
+      }
+  
+    if (generatedQuestions[questionIndex] >= 525585100 && generatedQuestions[questionIndex] <= 525585599) {
+        directadd = 4;
+      }
+	  
+    if (generatedQuestions[questionIndex] >= 525585600 && generatedQuestions[questionIndex] <= 525586099) {
+        directadd = 5;
+      }
+  
+    if (generatedQuestions[questionIndex] >= 525586100 && generatedQuestions[questionIndex] <= 525586599) {
+        directadd = 6;
+      }
+	  
+	if (generatedQuestions[questionIndex] >= 525586600 && generatedQuestions[questionIndex] <= 525587099) {
+        directadd = 7;
+      }
+  
+    if (generatedQuestions[questionIndex] >= 525587100 && generatedQuestions[questionIndex] <= 525587599) {
+        directadd = 8;
+      }
+	  
+    if (generatedQuestions[questionIndex] >= 525587600 && generatedQuestions[questionIndex] <= 525588099) {
+        directadd = 9;
+      }
+  
+    if (generatedQuestions[questionIndex] >= 525588100 && generatedQuestions[questionIndex] <= 525588599) {
+        directadd = 10;
+      }
+	  
+	if (generatedQuestions[questionIndex] >= 525588600 && generatedQuestions[questionIndex] <= 525588621) {
+        directadd = 11;
+      }
+  
+  
+questionNumbersDiv.innerHTML = '   CuretFile= <a href="' + directadd + "/"+  generatedQuestions[questionIndex] + '.html" target="_blank">' + generatedQuestions[questionIndex] + '</a> ( Question ' + (questionIndex + 1) + ' of ' + generatedQuestions.length+ ' ) ';
 
 
 
   var questionFrame = document.getElementById('questionFrame');
-  questionFrame.src =  generatedQuestions[questionIndex]  + '.html';
+  questionFrame.src =  directadd + "/"+ generatedQuestions[questionIndex]  + '.html';
 
   var savedAnswer = localStorage.getItem('answer_' + questionIndex);
   if (savedAnswer !== null) {
