@@ -51,6 +51,7 @@
   <input type="number" id="gotoQuestionNumbval" value="100" min="1" max="5000" required>
   <button onclick="gotoQuestion()">GoTo Questions</button>
   </div>
+  
   <textarea id="answerBox"  rows="4" cols="150"></textarea>
   <textarea id="answerBox2" rows="4" cols="150"></textarea>
  
@@ -158,17 +159,14 @@ questionNumbersDiv.innerHTML = '   CuretFile= <a href="' + directadd + "/"+  gen
         displayQuestion();
       }
     }
-	
-	    function gotoQuestion() {
+    function gotoQuestion() {
  var gotoQuestionNumbval = document.getElementById('gotoQuestionNumbval').value;
       if (questionIndex >= 0) {
-	         
         questionIndex = gotoQuestionNumbval ;
-		 questionIndex--;
+		questionIndex--;
         displayQuestion();
       }
     }
-
     function nextQuestion() {
       if (questionIndex < generatedQuestions.length - 1) {
         questionIndex++;
